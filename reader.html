@@ -13,6 +13,37 @@ content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet"
 href="assets/css/style.css">
 
+<style>
+
+.chapter-navigation{
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    margin-top:20px;
+}
+
+.chapter-navigation a{
+    flex:1;
+    text-align:center;
+    padding:10px;
+    background:#222;
+    color:#fff;
+    text-decoration:none;
+    border-radius:8px;
+    transition:0.2s;
+}
+
+.chapter-navigation a:hover{
+    background:#444;
+}
+
+.chapter-navigation a.disabled{
+    opacity:0.5;
+    pointer-events:none;
+}
+
+</style>
+
 </head>
 
 <body>
@@ -26,11 +57,11 @@ href="assets/css/style.css">
       <span>Đọc chương</span>
 
       <a class="back-home"
-         href="index.html">
+   href="javascript:history.back()">
 
-        ← Trang Chủ
+  ← Quay lại
 
-      </a>
+</a>
 
     </div>
 
@@ -40,6 +71,19 @@ href="assets/css/style.css">
 
     <div id="chapter-content">
       Đang tải chương...
+    </div>
+
+    <!-- Nút điều hướng -->
+    <div class="chapter-navigation">
+
+      <a id="prev-btn" href="#">
+        ← Chương trước
+      </a>
+
+      <a id="next-btn" href="#">
+        Chương sau →
+      </a>
+
     </div>
 
   </div>
@@ -57,24 +101,102 @@ params.get("id");
 const chapter =
 params.get("chapter");
 
+const chapterContent =
+document.getElementById("chapter-content");
+
+const prevBtn =
+document.getElementById("prev-btn");
+
+const nextBtn =
+document.getElementById("next-btn");
+
 fetch(`./data/chapters/${id}/${chapter}`)
 
-.then(res => res.text())
+.then(res => {
+
+    if(!res.ok){
+        throw new Error("Không tìm thấy chương");
+    }
+
+    return res.text();
+
+})
 
 .then(text => {
 
-document.getElementById(
-"chapter-content"
-).innerText = text;
+chapterContent.innerText = text;
+
+/* =========================
+   XỬ LÝ CHƯƠNG
+========================= */
+
+const match =
+chapter.match(/\d+/);
+
+const currentChapter =
+match ? parseInt(match[0]) : 1;
+
+const extension =
+chapter.split('.').pop();
+
+/* ===== CHƯƠNG TRƯỚC ===== */
+
+if(currentChapter > 1){
+
+    const prevChapter =
+    `chap${currentChapter - 1}.${extension}`;
+
+    prevBtn.href =
+    `read.html?id=${id}&chapter=${prevChapter}`;
+
+}else{
+
+    prevBtn.classList.add("disabled");
+
+}
+
+/* ===== CHƯƠNG SAU ===== */
+
+const nextChapter =
+`chap${currentChapter + 1}.${extension}`;
+
+/* 
+   Kiểm tra chương sau có tồn tại không
+   Nếu không thì disable nút
+*/
+
+fetch(`./data/chapters/${id}/${nextChapter}`)
+
+.then(res => {
+
+    if(res.ok){
+
+        nextBtn.href =
+        `read.html?id=${id}&chapter=${nextChapter}`;
+
+    }else{
+
+        nextBtn.classList.add("disabled");
+
+    }
+
+})
+
+.catch(() => {
+
+    nextBtn.classList.add("disabled");
+
+});
 
 })
 
 .catch(error => {
 
-document.getElementById(
-"chapter-content"
-).innerHTML =
+chapterContent.innerHTML =
 "<h2>Không tìm thấy chương</h2>";
+
+prevBtn.classList.add("disabled");
+nextBtn.classList.add("disabled");
 
 console.log(error);
 

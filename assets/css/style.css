@@ -223,3 +223,25 @@ body{
   }
 
 }
+.chapter-navigation{
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    margin-top:20px;
+}
+
+.chapter-navigation a{
+    flex:1;
+    text-align:center;
+    padding:10px;
+    background:#222;
+    color:#fff;
+    text-decoration:none;
+    border-radius:8px;
+}
+
+.chapter-navigation a.disabled{
+    opacity:0.5;
+    pointer-events:none;
+    cursor:not-allowed;
+}
