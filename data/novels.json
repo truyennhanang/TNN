@@ -6,7 +6,6 @@
 "cover": "assets/img/dau-em-co-keu-ky.png",
 "description": "Hào môn thế gia, cưới trước yêu sau.",
 
-
 "chapters": [
   { "title": "Chương 1", "file": "chap-1.txt" },
   { "title": "Chương 2", "file": "chap-2.txt" },
@@ -46,7 +45,6 @@
 
 
 },
-
 {
 "id": "truyen-3",
 "title": "Tiểu Minh Đã Chết Như Thế Nào",
@@ -68,6 +66,7 @@
 ]
 
 },
+
 {
 "id": "truyen-4",
 "title": "Ánh Trăng Rơi Trên Vai Em",
@@ -111,5 +110,4 @@
 ]
 
 }
-
 ]
