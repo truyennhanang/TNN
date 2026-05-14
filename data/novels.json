@@ -6,7 +6,6 @@
 "cover": "assets/img/dau-em-co-keu-ky.png",
 "description": "Hào môn thế gia, cưới trước yêu sau.",
 
-```
 "chapters": [
   { "title": "Chương 1", "file": "chap-1.txt" },
   { "title": "Chương 2", "file": "chap-2.txt" },
@@ -19,7 +18,7 @@
   { "title": "Chương 9", "file": "chap-9.txt" },
   { "title": "Chương 10", "file": "chap-10.txt" }
 ]
-```
+
 
 },
 
@@ -30,7 +29,7 @@
 "cover": "assets/img/dau-em-co-keu-ky.png",
 "description": "Gương vỡ lại lành, nhẹ nhàng chữa lành.",
 
-```
+
 "chapters": [
   { "title": "Chương 1", "file": "chap-1.txt" },
   { "title": "Chương 2", "file": "chap-2.txt" },
@@ -43,7 +42,7 @@
   { "title": "Chương 9", "file": "chap-9.txt" },
   { "title": "Chương 10", "file": "chap-10.txt" }
 ]
-```
+
 
 },
 
@@ -54,7 +53,7 @@
 "cover": "assets/img/dau-em-co-keu-ky.png",
 "description": "Kỳ thi đại học kết thúc, một vụ án cũ bị khơi lại.",
 
-```
+
 "chapters": [
   { "title": "Chương 1", "file": "chap-1.txt" },
   { "title": "Chương 2", "file": "chap-2.txt" },
@@ -67,7 +66,6 @@
   { "title": "Chương 9", "file": "chap-9.txt" },
   { "title": "Chương 10", "file": "chap-10.txt" }
 ]
-```
 
 }
 ]
