@@ -4,71 +4,82 @@ const id = params.get("id");
 
 fetch("./data/novels.json")
 
-.then(res => res.json())
+  .then(res => res.json())
 
-.then(data => {
+  .then(data => {
 
-```
-const novel =
-  data.find(item => item.id === id);
+    const novel =
+      data.find(item => item.id === id);
 
-const container =
-  document.getElementById("novel-detail");
+    const container =
+      document.getElementById("novel-detail");
 
-if(!novel){
+    if(!novel){
 
-  container.innerHTML =
-    "<h1>Không tìm thấy truyện</h1>";
+      container.innerHTML =
+        "<h1>Không tìm thấy truyện</h1>";
 
-  return;
-}
+      return;
+    }
 
-let chapterHTML = "";
+    let chapterHTML = "";
 
-novel.chapters.forEach(chap => {
+    novel.chapters.forEach(chap => {
 
-  chapterHTML += `
+      chapterHTML += `
 
-    <a
-      class="chapter-btn"
-      href="reader.html?id=${id}&chapter=${chap.file}"
-    >
-      ${chap.title}
-    </a>
+        <a
+          class="chapter-btn"
+          href="reader.html?id=${id}&chapter=${chap.file}"
+        >
+          ${chap.title}
+        </a>
 
-  `;
+      `;
 
-});
+    });
 
-container.innerHTML = `
+    container.innerHTML = `
 
   <div class="detail-box">
 
-    <div class="cover">
+    <div class="detail-top">
 
-      <img src="${novel.cover}">
+      <div class="cover">
+
+        <img
+          src="${novel.cover}"
+          alt="${novel.title}"
+        >
+
+      </div>
+
+      <div class="info">
+
+        <h1>${novel.title}</h1>
+
+        <p>${novel.author}</p>
+
+        <p>${novel.description}</p>
+
+      </div>
 
     </div>
 
-    <div class="info">
+    <div class="chapter-list">
 
-      <h1>${novel.title}</h1>
-
-      <p>${novel.author}</p>
-
-      <p>${novel.description}</p>
-
-      <div class="chapter-list">
-
-        ${chapterHTML}
-
-      </div>
+      ${chapterHTML}
 
     </div>
 
   </div>
 
 `;
-```
 
-});
+  })
+
+  .catch(error => {
+
+    console.log(error);
+
+  });

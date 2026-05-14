@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Đọc chương</title>
+
+<link rel="stylesheet"
+href="assets/css/style.css">
+
+</head>
+
+<body>
+
+<div class="window">
+
+  <div class="title-bar">
+
+    <div class="title-flex">
+
+      <span>Đọc chương</span>
+
+      <a class="back-home"
+         href="index.html">
+
+        ← Trang Chủ
+
+      </a>
+
+    </div>
+
+  </div>
+
+  <div class="content">
+
+    <div id="chapter-content">
+      Đang tải chương...
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+
+const params =
+new URLSearchParams(window.location.search);
+
+const id =
+params.get("id");
+
+const chapter =
+params.get("chapter");
+
+fetch(`./data/chapters/${id}/${chapter}`)
+
+.then(res => res.text())
+
+.then(text => {
+
+document.getElementById(
+"chapter-content"
+).innerText = text;
+
+})
+
+.catch(error => {
+
+document.getElementById(
+"chapter-content"
+).innerHTML =
+"<h2>Không tìm thấy chương</h2>";
+
+console.log(error);
+
+});
+
+</script>
+
+</body>
+</html>
