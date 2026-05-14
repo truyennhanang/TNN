@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Truyện Nhà Nàng</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="stars"></div>
+<div class="overlay"></div>
+
+<header>
+    <div class="logo">🌙 Truyện Nhà Nàng</div>
+
+    <nav>
+        <a href="#">Trang Chủ</a>
+        <a href="#">Danh Sách</a>
+        <a href="#">Mới Nhất</a>
+        <a href="#">Dark Mode</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <span class="tag">Anime • Aesthetic • Chill</span>
+        <h1>Đọc truyện trong màn đêm</h1>
+        <p>
+            Một không gian đọc truyện đậm chất anime aesthetic,
+            hiệu ứng glow, glassmorphism và giao diện chill ban đêm.
+        </p>
+
+        <button onclick="scrollToReader()">
+            ✨ Đọc Ngay
+        </button>
+    </div>
+</section>
+
+<section class="trending">
+
+<h2>🔥 Truyện nổi bật</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-info">
+<span>Fantasy Romance</span>
+<h3>Truyện Nhà Nàng</h3>
+<p>Trong màn đêm ấy, nàng xuất hiện như ánh trăng cuối cùng...</p>
+
+<button onclick="loadChap(0)">Đọc Truyện</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-info">
+<span>Drama</span>
+<h3>Đêm Mưa Ký Ức</h3>
+<p>Những ký ức cũ quay về giữa cơn mưa đêm lạnh giá...</p>
+
+<button>Chi Tiết</button>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="reader" id="reader">
+
+<div class="reader-top">
+<h1 id="chap-title">Đang tải...</h1>
+<div class="chapter-badge">Night Reading ✨</div>
+</div>
+
+<div id="chap-content"></div>
+
+<div class="buttons">
+<button onclick="prevChap()">⬅ Chap trước</button>
+<button onclick="nextChap()">Chap tiếp ➡</button>
+</div>
+
+</section>
+
+<div class="floating-moon">🌙</div>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
