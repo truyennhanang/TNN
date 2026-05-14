@@ -4,7 +4,23 @@
 "title": "Cỏ Lồng Vực",
 "author": "Lam Hồ Tử",
 "cover": "assets/img/dau-em-co-keu-ky.png",
-"description": "Hào môn thế gia, cưới trước yêu sau."
+"description": "Hào môn thế gia, cưới trước yêu sau.",
+
+
+"chapters": [
+  { "title": "Chương 1", "file": "chap-1.txt" },
+  { "title": "Chương 2", "file": "chap-2.txt" },
+  { "title": "Chương 3", "file": "chap-3.txt" },
+  { "title": "Chương 4", "file": "chap-4.txt" },
+  { "title": "Chương 5", "file": "chap-5.txt" },
+  { "title": "Chương 6", "file": "chap-6.txt" },
+  { "title": "Chương 7", "file": "chap-7.txt" },
+  { "title": "Chương 8", "file": "chap-8.txt" },
+  { "title": "Chương 9", "file": "chap-9.txt" },
+  { "title": "Chương 10", "file": "chap-10.txt" }
+]
+
+
 },
 
 {
@@ -12,7 +28,23 @@
 "title": "Lời Thì Thầm Của Cánh Diều",
 "author": "Chu Tiểu Đảo",
 "cover": "assets/img/dau-em-co-keu-ky.png",
-"description": "Gương vỡ lại lành, nhẹ nhàng chữa lành."
+"description": "Gương vỡ lại lành, nhẹ nhàng chữa lành.",
+
+
+"chapters": [
+  { "title": "Chương 1", "file": "chap-1.txt" },
+  { "title": "Chương 2", "file": "chap-2.txt" },
+  { "title": "Chương 3", "file": "chap-3.txt" },
+  { "title": "Chương 4", "file": "chap-4.txt" },
+  { "title": "Chương 5", "file": "chap-5.txt" },
+  { "title": "Chương 6", "file": "chap-6.txt" },
+  { "title": "Chương 7", "file": "chap-7.txt" },
+  { "title": "Chương 8", "file": "chap-8.txt" },
+  { "title": "Chương 9", "file": "chap-9.txt" },
+  { "title": "Chương 10", "file": "chap-10.txt" }
+]
+
+
 },
 
 {
@@ -20,22 +52,20 @@
 "title": "Tiểu Minh Đã Chết Như Thế Nào",
 "author": "Quyển Giác",
 "cover": "assets/img/dau-em-co-keu-ky.png",
-"description": "Kỳ thi đại học kết thúc, một vụ án cũ bị khơi lại."
-},
+"description": "Kỳ thi đại học kết thúc, một vụ án cũ bị khơi lại.",
 
-{
-"id": "truyen-4",
-"title": "Vẽ Lại Mối Tình Đầu",
-"author": "Mộc Qua Hoàng",
-"cover": "assets/img/dau-em-co-keu-ky.png",
-"description": "Thanh xuân vườn trường, chữa lành."
-},
+"chapters": [
+  { "title": "Chương 1", "file": "chap-1.txt" },
+  { "title": "Chương 2", "file": "chap-2.txt" },
+  { "title": "Chương 3", "file": "chap-3.txt" },
+  { "title": "Chương 4", "file": "chap-4.txt" },
+  { "title": "Chương 5", "file": "chap-5.txt" },
+  { "title": "Chương 6", "file": "chap-6.txt" },
+  { "title": "Chương 7", "file": "chap-7.txt" },
+  { "title": "Chương 8", "file": "chap-8.txt" },
+  { "title": "Chương 9", "file": "chap-9.txt" },
+  { "title": "Chương 10", "file": "chap-10.txt" }
+]
 
-{
-"id": "truyen-5",
-"title": "Đêm Mưa Không Người",
-"author": "Khuyết Danh",
-"cover": "assets/img/dau-em-co-keu-ky.png",
-"description": "Huyền nghi hiện đại, tâm lý."
 }
 ]
