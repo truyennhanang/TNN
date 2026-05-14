@@ -67,5 +67,49 @@
   { "title": "Chương 10", "file": "chap-10.txt" }
 ]
 
+},
+{
+"id": "truyen-4",
+"title": "Ánh Trăng Rơi Trên Vai Em",
+"author": "Tống Nam Yên",
+"cover": "assets/img/dau-em-co-keu-ky.png",
+"description": "Thanh xuân vườn trường, thầm yêu nhiều năm.",
+
+"chapters": [
+  { "title": "Chương 1", "file": "chap-1.txt" },
+  { "title": "Chương 2", "file": "chap-2.txt" },
+  { "title": "Chương 3", "file": "chap-3.txt" },
+  { "title": "Chương 4", "file": "chap-4.txt" },
+  { "title": "Chương 5", "file": "chap-5.txt" },
+  { "title": "Chương 6", "file": "chap-6.txt" },
+  { "title": "Chương 7", "file": "chap-7.txt" },
+  { "title": "Chương 8", "file": "chap-8.txt" },
+  { "title": "Chương 9", "file": "chap-9.txt" },
+  { "title": "Chương 10", "file": "chap-10.txt" }
+]
+
+},
+
+{
+"id": "truyen-5",
+"title": "Sau Khi Ly Hôn Tôi Nổi Tiếng",
+"author": "Hạ Vãn Đình",
+"cover": "assets/img/dau-em-co-keu-ky.png",
+"description": "Giới giải trí, cưới trước yêu sau, nữ chính mạnh mẽ.",
+
+"chapters": [
+  { "title": "Chương 1", "file": "chap-1.txt" },
+  { "title": "Chương 2", "file": "chap-2.txt" },
+  { "title": "Chương 3", "file": "chap-3.txt" },
+  { "title": "Chương 4", "file": "chap-4.txt" },
+  { "title": "Chương 5", "file": "chap-5.txt" },
+  { "title": "Chương 6", "file": "chap-6.txt" },
+  { "title": "Chương 7", "file": "chap-7.txt" },
+  { "title": "Chương 8", "file": "chap-8.txt" },
+  { "title": "Chương 9", "file": "chap-9.txt" },
+  { "title": "Chương 10", "file": "chap-10.txt" }
+]
+
 }
+
 ]
