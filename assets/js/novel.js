@@ -10,8 +10,7 @@ const container =
 data.forEach(novel => {
   container.innerHTML += 
     <div class="card">
-      <img  src="${novel.cover}" alt="${novel.title}"
-      >
+      <img  src="${novel.cover}" alt="${novel.title}"    >
 
       <h3>${novel.title}</h3>
 

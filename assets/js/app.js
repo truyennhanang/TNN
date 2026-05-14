@@ -1,41 +1,52 @@
-fetch('data/novels.json')
-.then(res => res.json())
-.then(data => {
+console.log("APP RUNNING");
 
-const container =
-document.getElementById('novel-list');
+fetch("./data/novels.json")
 
-data.forEach(novel => {
+  .then(response => response.json())
 
-```
-container.innerHTML += `
+  .then(data => {
 
-  <div class="card">
+    console.log(data);
 
-    <img
-      src="${novel.cover}"
-      alt="${novel.title}"
-    >
+    const container =
+      document.getElementById("novel-list");
 
-    <h3>${novel.title}</h3>
+    let html = "";
 
-    <p>${novel.author}</p>
+    data.forEach(novel => {
 
-    <a
-      class="read-btn"
-      href="novel.html?id=${novel.id}"
-    >
-      Đọc Ngay
-    </a>
+      html += `
 
-  </div>
+        <div class="card">
 
-`;
-```
+          <img
+            src="${novel.cover}"
+            alt="${novel.title}"
+          >
 
-});
+          <h3>${novel.title}</h3>
 
-})
-.catch(error => {
-console.log(error);
-});
+          <p>${novel.author}</p>
+
+          <a
+            class="read-btn"
+            href="novel.html?id=${novel.id}"
+          >
+            Đọc Ngay
+          </a>
+
+        </div>
+
+      `;
+
+    });
+
+    container.innerHTML = html;
+
+  })
+
+  .catch(error => {
+
+    console.log(error);
+
+  });
