@@ -1,31 +1,74 @@
-console.log("APP RUNNING");
+const params = new URLSearchParams(window.location.search);
 
-fetch('data/novels.json')
-.then(response => response.json())
+const id = params.get("id");
+
+fetch("./data/novels.json")
+
+.then(res => res.json())
 
 .then(data => {
-console.log(data);
-const container =
-  document.getElementById('novel-list');
-data.forEach(novel => {
-  container.innerHTML += 
-    <div class="card">
-      <img  src="${novel.cover}" alt="${novel.title}"    >
 
-      <h3>${novel.title}</h3>
+```
+const novel =
+  data.find(item => item.id === id);
+
+const container =
+  document.getElementById("novel-detail");
+
+if(!novel){
+
+  container.innerHTML =
+    "<h1>Không tìm thấy truyện</h1>";
+
+  return;
+}
+
+let chapterHTML = "";
+
+novel.chapters.forEach(chap => {
+
+  chapterHTML += `
+
+    <a
+      class="chapter-btn"
+      href="reader.html?id=${id}&chapter=${chap.file}"
+    >
+      ${chap.title}
+    </a>
+
+  `;
+
+});
+
+container.innerHTML = `
+
+  <div class="detail-box">
+
+    <div class="cover">
+
+      <img src="${novel.cover}">
+
+    </div>
+
+    <div class="info">
+
+      <h1>${novel.title}</h1>
 
       <p>${novel.author}</p>
 
-      <a
-        class="read-btn"
-        href="novel.html?id=${novel.id}"
-      >
-        Đọc Ngay
-      </a>
-    </div>  ;
+      <p>${novel.description}</p>
 
-});
-})
-.catch(error => {console.log("FETCH ERROR:");
-console.log(error);
+      <div class="chapter-list">
+
+        ${chapterHTML}
+
+      </div>
+
+    </div>
+
+  </div>
+
+`;
+```
+
 });
