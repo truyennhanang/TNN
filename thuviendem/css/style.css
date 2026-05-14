@@ -1,0 +1,97 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial;
+    background:#0b0b10;
+    color:white;
+    overflow-x:hidden;
+}
+
+.bg{
+    position:fixed;
+    inset:0;
+    background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+    url('../img/bg.jpg') center/cover;
+    z-index:-1;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    padding:20px 8%;
+    background:rgba(0,0,0,.4);
+    backdrop-filter:blur(10px);
+    position:sticky;
+    top:0;
+}
+
+header h1{
+    color:#ff77c8;
+}
+
+.menu{
+    display:flex;
+    gap:20px;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+}
+
+.hero{
+    padding:120px 8%;
+}
+
+.hero h2{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.reader{
+    max-width:900px;
+    margin:auto;
+    padding:40px;
+    background:rgba(255,255,255,.05);
+    border-radius:20px;
+    line-height:2;
+    margin-bottom:100px;
+}
+
+#title{
+    color:#ff77c8;
+    margin-bottom:30px;
+}
+
+.buttons{
+    margin-top:40px;
+    display:flex;
+    gap:20px;
+}
+
+.buttons button{
+    flex:1;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:#ff77c8;
+    color:white;
+    cursor:pointer;
+}
+
+.music-btn{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:60px;
+    height:60px;
+    border:none;
+    border-radius:50%;
+    background:#ff77c8;
+    color:white;
+    font-size:24px;
+}

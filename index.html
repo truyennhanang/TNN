@@ -3,44 +3,63 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Thư Viện Đêm</title>
+<title>Truyện Nhà Nàng</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<div class="bg"></div>
+<div class="overlay"></div>
 
 <header>
-<h1>📚 Thư Viện Đêm</h1>
+    <div class="logo">🌙 Truyện Nhà Nàng</div>
 
-<div class="menu">
-<a href="#">Trang Chủ</a>
-<a href="#">Truyện</a>
-</div>
+    <nav>
+        <a href="#">Trang Chủ</a>
+        <a href="#">Danh Sách Truyện</a>
+        <a href="#">Mới Cập Nhật</a>
+    </nav>
 </header>
 
 <section class="hero">
-<h2>Đọc truyện trong màn đêm ✨</h2>
-<p>Một website đọc truyện dark mode anime aesthetic.</p>
+    <h1>Đọc truyện trong màn đêm ✨</h1>
+    <p>Anime aesthetic • Dark mode • Chill vibes</p>
+</section>
+
+<section class="card-list">
+
+<div class="story-card">
+    <img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?q=80&w=1200&auto=format&fit=crop" alt="">
+
+    <div class="story-info">
+        <h2>Truyện Nhà Nàng</h2>
+        <p>Thế giới truyện đêm đầy cảm xúc...</p>
+
+        <button onclick="loadChap(0)">
+            Đọc Ngay
+        </button>
+    </div>
+</div>
+
 </section>
 
 <section class="reader">
-<h1 id="title">Chương 1</h1>
 
-<div id="content">
-Đang tải chap...
+<h1 id="chap-title">Chương 1</h1>
+
+<div id="chap-content">
+Đang tải nội dung...
 </div>
 
 <div class="buttons">
-<button onclick="prevChap()">⬅ Chap trước</button>
-<button onclick="nextChap()">Chap tiếp ➡</button>
+    <button onclick="prevChap()">⬅ Chap trước</button>
+    <button onclick="nextChap()">Chap tiếp ➡</button>
 </div>
+
 </section>
 
 <button class="music-btn" onclick="toggleMusic()">♫</button>
 
 <audio id="music" loop>
-<source src="music/chill.mp3" type="audio/mp3">
 </audio>
 
 <script src="js/app.js"></script>
