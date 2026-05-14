@@ -3,7 +3,7 @@
 "id": "truyen-1",
 "title": "Cỏ Lồng Vực",
 "author": "Lam Hồ Tử",
-"cover": "assets/img/dau-em-co-keu-ky.png",
+"cover": "./assets/img/dau-em-co-keu-ky.png",
 "description": "Hào môn thế gia, cưới trước yêu sau.",
 
 "chapters": [
@@ -18,15 +18,13 @@
   { "title": "Chương 9", "file": "chap-9.txt" },
   { "title": "Chương 10", "file": "chap-10.txt" }
 ]
-
-
 },
 
 {
 "id": "truyen-2",
 "title": "Lời Thì Thầm Của Cánh Diều",
 "author": "Chu Tiểu Đảo",
-"cover": "assets/img/dau-em-co-keu-ky.png",
+"cover": "./assets/img/dau-em-co-keu-ky.png",
 "description": "Gương vỡ lại lành, nhẹ nhàng chữa lành.",
 
 
@@ -49,7 +47,7 @@
 "id": "truyen-3",
 "title": "Tiểu Minh Đã Chết Như Thế Nào",
 "author": "Quyển Giác",
-"cover": "assets/img/dau-em-co-keu-ky.png",
+"cover": "./assets/img/dau-em-co-keu-ky.png",
 "description": "Kỳ thi đại học kết thúc, một vụ án cũ bị khơi lại.",
 
 "chapters": [
@@ -71,7 +69,7 @@
 "id": "truyen-4",
 "title": "Ánh Trăng Rơi Trên Vai Em",
 "author": "Tống Nam Yên",
-"cover": "assets/img/dau-em-co-keu-ky.png",
+"cover": "./assets/img/dau-em-co-keu-ky.png",
 "description": "Thanh xuân vườn trường, thầm yêu nhiều năm.",
 
 "chapters": [
